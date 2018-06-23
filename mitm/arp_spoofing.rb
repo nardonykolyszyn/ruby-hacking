@@ -1,6 +1,6 @@
 # Enable first packet forwading on your system
 # echo "1" > /proc/sys/net/ipv4/ip_forward
-
+$VERBOSE=nil
 require 'packetfu'
 require 'colorize'
 require 'optparse'
@@ -9,34 +9,34 @@ OPTIONS = {}
 
 # Parse options
 parse = OptionParser.new do |ps|
-  ps.banner = 'ruby xsl2csv <options> <file>'
+  ps.banner = 'ruby arp_spoofing.rb --help'
   ps.separator ''
   ps.on('-o', '--output-name', 'Output file name') do |filename|
-	OPTIONS[:filename] = filename
+    OPTIONS[:filename] = filename
   end
 
   ps.on('-a', '--attacker-mac', 'Ataccker Mac') do |mac|
-	OPTIONS[:ataccker_mac] = mac
+    OPTIONS[:ataccker_mac] = mac
   end
 
   ps.on('-vip', '--victim-ip', 'Victim IP') do |ip|
-	OPTIONS[:victim_ip] = ip
+    OPTIONS[:victim_ip] = ip
   end
 
   ps.on('-vmac', '--victim-mac', 'Victim Mac') do |mac|
-	OPTIONS[:victim_mac] = mac
+    OPTIONS[:victim_mac] = mac
   end
 
   ps.on('-rip', '--router-ip', 'Router IP') do |ip|
-	OPTIONS[:router_ip] = ip
+    OPTIONS[:router_ip] = ip
   end
 
   ps.on('-rmac', '--router-mac', 'Router Mac') do |mac|
-	OPTIONS[:router_mac] = mac
+    OPTIONS[:router_mac] = mac
   end
 
   ps.on('-i', '--interface ') do |interface|
-     OPTIONS[:interface] = interface
+    OPTIONS[:interface] = interface
   end
 end
 
