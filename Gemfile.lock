@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    colorize (0.8.1)
+    net-dns (0.8.0)
+    packetfu (1.1.13)
+      pcaprub
+    pcaprub (0.13.0)
+    ruby-terminfo (0.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  colorize
+  net-dns
+  packetfu
+  ruby-terminfo
+
+BUNDLED WITH
+   1.16.0
